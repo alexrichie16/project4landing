@@ -1,0 +1,62 @@
+<!doctype html> <!-- doctype tag must exist at the top of every html5 file -->
+<html lang="en">
+<!-- head section -- the "backstage" area of the web page -->
+<head>
+	<!-- meta tags -->
+	<meta charset="utf-8" />
+
+	<!-- shiv/shim - Helps Internet Explorer older than v. 9 work correctly with html5 -->
+	<!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+
+	<!-- Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- stylesheet links -->
+	<link rel="stylesheet" href="/styles/normalize.css">
+	<link rel="stylesheet" href="styles/main.css">
+
+	<!-- favicon link -->
+	<link rel="icon" href="images/favicon.ico">
+
+	<!-- title tag -->
+	<title>RichieEntropy &Delta;S | 50States</title>
+
+	<!-- ----------- ----------- Slicknav Links and Scripts ----------- ----------- -->
+	<!-- Slicknav Stylesheet link -->
+	<link rel="stylesheet" href="styles/slicknav.css">
+	<!-- jQuery CDN - needed to drive slicknav -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- link to local js slicknav script file -->
+	<script src="js/jquery.slicknav.min.js"></script>
+	<!-- slicknav script - converts contents of nav_menu to mobilemenu -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+		});
+	</script>
+</head>
+<header>
+	<h1>Project 4 Landing Page</h1>
+</header>
+<body>
+	<h1>Home</h1>
+	<div><img src="images/header_image.jpg" alt="Hollywood"></div>
+	<h3>Welcome to my mini-project landing page!</h3>
+	<nav id="mobilemenu"></nav>
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="https://alexrichieslideshow.netlify.app/">Slideshow</a></li>
+            <li><a href="https://alexrichiefalloutboy.netlify.app/index.html">Photo Gallery</a></li>
+            <li><a href="https://alexrichievideo.netlify.app/">Video Gallery</a></li>
+        </ul>
+    </nav>
+</body>
+	<script>
+        window.onload = function() {
+            var d = new Date();
+            document.getElementById("copyright").innerHTML = d.getFullYear();
+        }
+    </script>
+	<footer>
+		<p>&copy; <span id="copyright"></span> RichieEntropy &Delta;S | 50States</p>
+	</footer>
